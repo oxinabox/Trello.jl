@@ -13,6 +13,31 @@ function get_boards(cred::TrelloCred)
 end
 
 """
+    create_board(cred::TrelloCred, name; desc="", id_organization="")
+
+Create a new board on the `cred` account.
+If `id_organization` is provided then it will be created within that organization.
+"""
+function create_board(cred::TrelloCred, name; desc="", id_organization="")
+    post_request(cred, "/1/boards/",
+        name=name,
+        desc=desc,
+        idOrganization=id_organization,
+    )
+end
+
+"""
+    delete_board(cred::TrelloCred, id)
+
+Deletes the board.
+"""
+delete_board(cred::TrelloCred, id) = delete_request(cred, "/1/boards/$id")
+
+
+
+
+
+"""
     create_list(board_id, name, pos="top"; cred::TrelloCred)
 
 Create a list within the given board, with the given `name`,

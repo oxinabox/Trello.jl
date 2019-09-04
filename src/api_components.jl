@@ -4,6 +4,7 @@ query_parts(cred::TrelloCred) = ["key"=>cred.api_key, "token"=>cred.api_token]
 function request(method, cred, path; query_kwargs...)
     query = query_parts(cred)
     for (key, value) in query_kwargs
+        isempty(value) && continue
         push!(query, string(key) => string(value))
     end
     uri = HTTP.URI(host="api.trello.com", scheme="https", path=path, query=query)
