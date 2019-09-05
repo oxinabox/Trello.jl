@@ -22,3 +22,6 @@ function indexed_collection(collection, index=:name)
     keys = getproperty.(collection, index)
     return LittleDict(keys, collection)
 end
+
+sortbypos(collection) = sort(collection; by=x->x.pos)
+filteroutclosed(collection) = filter(x->!x.closed, collection)

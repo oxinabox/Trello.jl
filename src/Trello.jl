@@ -5,7 +5,7 @@ using JSON2
 
 export TrelloCred
 export get_boards, get_lists, get_labels, get_cards
-export create_board, create_lists, create_card
+export create_board, create_list, create_card
 export delete_board
 
 include("auth.jl")
