@@ -88,7 +88,7 @@ end
 """
     get_cards(cred::TrelloCred, list_id)
 
-return a all the cards on a given board.
+Returns all the cards on a given list.
 """
 function get_cards(cred::TrelloCred, list_id)
     raw = get_request(cred, "/1/lists/$(list_id)/cards")
