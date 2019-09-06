@@ -9,7 +9,6 @@ using UUIDs
     original_boards = get_boards(cred)
     new_board_name = "ZZ_testing_$(uuid1())"
     
-    
     # Should be able to create boards:
     create_board(cred::TrelloCred, new_board_name; desc="testing")
     boards = get_boards(cred)
@@ -39,7 +38,7 @@ using UUIDs
     @test collect(keys(cards)) == ["C1", "C2", "C3"]
 
 
-    # After deleting board should be back as we started
+    # After deleting board should be gone
     delete_board(cred, board_id)
-    @test keys(original_boards) == keys(get_boards(cred))
+    @test !haskey(get_boards(cred), new_board_name)
 end
