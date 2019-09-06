@@ -1,4 +1,3 @@
-
 """
     request(method, cred, path; query_kwargs...)
 
