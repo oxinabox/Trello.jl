@@ -2,7 +2,6 @@ using Trello
 using Test
 using UUIDs
 
-@show get(ENV, "DUMMY", "nodummy") 
 @testset "Trello.jl" begin
 
     cred = TrelloCred()
