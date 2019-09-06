@@ -1,4 +1,4 @@
-# Trello  [![Lifecycle: Maturing](https://www.tidyverse.org/lifecycle/#maturing)](https://img.shields.io/badge/lifecycle-maturing-blue.svg)]
+# Trello  [![lifecycle: Maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://oxinabox.github.io/Trello.jl/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://oxinabox.github.io/Trello.jl/dev)
