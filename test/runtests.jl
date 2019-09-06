@@ -1,7 +1,9 @@
 using Trello
 using Test
 using UUIDs
-#@testset "Trello.jl" begin
+
+@show get(ENV, "DUMMY", "nodummy") 
+@testset "Trello.jl" begin
 
     cred = TrelloCred()
 
@@ -41,4 +43,4 @@ using UUIDs
     # After deleting board should be back as we started
     delete_board(cred, board_id)
     @test keys(original_boards) == keys(get_boards(cred))
-#end
+end
