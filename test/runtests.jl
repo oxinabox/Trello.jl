@@ -6,13 +6,12 @@ using UUIDs
 
     cred = TrelloCred()
 
-    original_boards = get_boards(cred)
     new_board_name = "ZZ_testing_$(uuid1())"
-    
+
     # Should be able to create boards:
     create_board(cred::TrelloCred, new_board_name; desc="testing")
     boards = get_boards(cred)
-    @test Set(keys(boards)) == Set([new_board_name, keys(original_boards)...])
+    @test haskey(boards, new_board_name)
     @test boards[new_board_name].desc == "testing"
     board_id = boards[new_board_name].id
 
