@@ -1,10 +1,9 @@
-# Trello
+# Trello  [![Lifecycle: Maturing](https://www.tidyverse.org/lifecycle/#maturing)](https://img.shields.io/badge/lifecycle-maturing-blue.svg)]
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://oxinabox.github.io/Trello.jl/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://oxinabox.github.io/Trello.jl/dev)
 [![Build Status](https://travis-ci.com/oxinabox/Trello.jl.svg?branch=master)](https://travis-ci.com/oxinabox/Trello.jl)
 [![Codecov](https://codecov.io/gh/oxinabox/Trello.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/oxinabox/Trello.jl)
-
 
 
 This is an unofficial julia client for [Trello](https://trello.com/).
@@ -17,7 +16,7 @@ For more direct control, use the `Trello.request` function, which will just call
 The API is not complete, you can find what operations we currently have in the docs.
 It is very easy to add any method, as you need it.
 Generally just a few lines of code, after reading the API docs.
-PRs are welcome.
+**PRs are welcome, and easy to make.**
 
 In general methods are prefixed with:
  - `create_[item]`: e.g. `create_card`
