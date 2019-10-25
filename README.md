@@ -84,6 +84,6 @@ julia> df = DataFrame(values(cards))
 │ 9   │ 5d7217c24f080a5833454150 │                 │ 0      │ 2019-09-06T08:24:34.991Z │ This is a important task │
 │ 10  │ 5d7217c31b352132d291f077 │                 │ 0      │ 2019-09-06T08:24:35.103Z │ This is a important task │
 
-julia> delete_board(cred, board_id)
+julia> delete_board(cred, board_resp.id)
 (_value = nothing,)
 ```
