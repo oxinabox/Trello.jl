@@ -32,7 +32,9 @@ This means that calling `values(get_[items](...))` will return a valid [`Tables.
 ### Demo:
 Here we demo:
 
- - instantiating credentials (from environment variables. `TRELLO_API_KEY`, `TRELLO_API_TOKEN`)
+ - instantiating credentials 
+     - read from environment variables. `TRELLO_API_KEY`, `TRELLO_API_TOKEN`
+     - can get these from https://trello.com/app-key/
  - creating a board
  - creating a list
  - adding some cards to that list
