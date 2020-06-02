@@ -19,16 +19,20 @@ using UUIDs
         # the resturn from `create_board` at least has same key fields as can be read from `get_boards`
         @test new_board.id == board.id
         @test new_board.name == board.name
-        
+
         # Test labels
         @test isempty(get_labels(cred, board_id))
+        @test isempty(get_labels(cred, board))  # not passing ID but passing the board object
 
         # Should be able to create lists
         create_list(cred, board_id, "L1")
         create_list(cred, board_id, "L2")
         create_list(cred, board, "L3")  # not passing ID but passing the board object
 
+        # should be able to get all the lists
         lists = get_lists(cred, board_id)
+        @test lists == get_lists(cred, board)  # not passing ID but passing the board object
+
         @test collect(keys(lists)) == ["L1", "L2", "L3"]
         list = lists["L2"]
         list_id = list.id
