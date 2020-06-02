@@ -1,7 +1,7 @@
 name = "Trello"
 uuid = "d200c542-ce20-11e9-2772-a79080e7011a"
 authors = ["Lyndon White"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
