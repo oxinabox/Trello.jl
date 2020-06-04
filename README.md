@@ -41,7 +41,7 @@ Here we demo:
  - reading them back down
  - rendering them as a `DataFrame`.
 
-```
+```julia
 julia> using Trello
 
 julia> cred = TrelloCred()
